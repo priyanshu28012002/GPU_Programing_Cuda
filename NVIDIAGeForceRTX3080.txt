@@ -50,4 +50,17 @@ Compute Mode: 0
 --- Async Engine ---
 Async Engine Count: 2
 
-============================
+
+SM:
+  executes multiple blocks
+  each block → multiple warps
+  each warp → 32 threads
+
+Scheduler:
+  fills SMs with as many blocks as resources allow
+  remaining blocks wait
+- Warp = 32 threads
+- SM executes many warps concurrently
+- Block is logical but consumes physical resources
+- One SM runs multiple blocks (not just one)
+- If total blocks exceed capacity, extra blocks wait in queue
