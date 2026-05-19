@@ -12,7 +12,6 @@ set(CMAKE_CUDA_ARCHITECTURES 86)
 
 find_package(OpenCV REQUIRED)
 
-
 set(CUDA_PROGRAMS
     basic_print:src/basic/print.cu
     basic_vec_add:src/basic/vec_add.cu
@@ -20,8 +19,6 @@ set(CUDA_PROGRAMS
     basic_matrixMultiplication:src/basic/matrixMultiplication.cu
     basic_matrix_transpose:src/basic/matrix_transpose.cu
     inverseImage:src/inverseImage/main.cu
-
-
 )
 
 foreach(entry ${CUDA_PROGRAMS})

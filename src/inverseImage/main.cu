@@ -20,10 +20,6 @@ __global__ void invert_kernel(unsigned char *img, int width, int height, int cha
     }
 }
 
-
-
-
-
 using namespace cv;
 using namespace std;
 
